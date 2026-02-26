@@ -3,7 +3,7 @@
   tagline: 'Draped in Timeless Grace',
   description: 'Handcrafted sarees and jewellery from the finest artisans of India.',
   url: 'https://riyajasminvastraabharana.com',
-  email: 'care@riyajasmin.com',
+  email: 'riyajasminvastraabharana@gmail.com',
   freeShippingThreshold: 1999,
   codFee: 49,
   codLimit: 10000,
