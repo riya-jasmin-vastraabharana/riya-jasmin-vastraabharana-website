@@ -14,6 +14,7 @@ const PRODUCTS: Product[] = [
   { id: "s002", sku: "RJV-SAR-BAN-001", name: "Royal Blue Banarasi", slug: "royal-blue-banarasi", price: 6299, originalPrice: 9500, images: ["https://images.unsplash.com/photo-1583391733956-6c78276477e4?w=400&q=80"], tag: "New", desc: "Handwoven Banarasi silk with golden brocade", stock: 12, material: "Pure Silk", occasion: ["Wedding","Festive","Reception"], category: "sarees", subcategory: "banarasi", whatsapp: "Hi! I want to order Royal Blue Banarasi (RJV-SAR-BAN-001) Rs 6299" },
   { id: "s003", sku: "RJV-SAR-COT-001", name: "Sage Green Chanderi Cotton", slug: "sage-green-chanderi", price: 2799, originalPrice: 4200, images: ["https://images.unsplash.com/photo-1617627143750-d86bc21e42bb?w=400&q=80"], tag: "Sale", desc: "Lightweight Chanderi cotton, office and casual wear", stock: 30, material: "Chanderi Cotton", occasion: ["Daily","Office","Casual"], category: "sarees", subcategory: "cotton", whatsapp: "Hi! I want to order Sage Green Chanderi (RJV-SAR-COT-001) Rs 2799" },
   { id: "s004", sku: "RJV-SAR-MYS-001", name: "Mysore Crepe Silk", slug: "mysore-crepe-silk", price: 4599, originalPrice: 6800, images: ["https://images.unsplash.com/photo-1594736797933-d0501ba2fe65?w=400&q=80"], tag: "New", desc: "Traditional temple border, pure Mysore silk", stock: 18, material: "Pure Silk", occasion: ["Festive","Wedding","Puja"], category: "sarees", subcategory: "mysore-silk", whatsapp: "Hi! I want to order Mysore Crepe Silk (RJV-SAR-MYS-001) Rs 4599" },
+  { id: "s005", sku: "RJV-SAR-KAN-001", name: "Ruby Blue Kanjivaram", slug: "ruby-red-kanjivaram", price: 99, originalPrice: 12000, images: ["C:\Users\billl\Downloads\blue_saree.jpg"], tag: "Bestseller", desc: "Pure Zari work bridal Kanjivaram silk saree", stock: 8, material: "Pure Mulberry Silk", occasion: ["Wedding","Bridal","Festive"], category: "sarees", subcategory: "kanjivaram", whatsapp: "Hi! I want to order Ruby Red Kanjivaram (RJV-SAR-KAN-001) Rs 8499" },
 ];
 
 const TAG_COLORS: Record<string, string> = {
@@ -150,7 +151,7 @@ export default function App() {
 
       {/* ── HERO ── */}
       <div style={{ background: "linear-gradient(135deg,#2c1810 0%,#5a2d0c 50%,#8B1A4A 100%)", padding: "64px 28px", textAlign: "center" }}>
-        <div style={{ fontSize: 11, letterSpacing: 6, color: "#B8860B", textTransform: "uppercase", marginBottom: 10 }}>Festive Collection 2025</div>
+        <div style={{ fontSize: 11, letterSpacing: 6, color: "#B8860B", textTransform: "uppercase", marginBottom: 10 }}>Festive Collection 2026</div>
         <h1 style={{ fontFamily: "Cormorant Garamond", fontSize: 52, fontWeight: 300, color: "#f5e6d3", margin: "0 0 12px", lineHeight: 1.1 }}>
           Draped in<br /><em style={{ fontWeight: 600, color: "#DAA520" }}>Timeless Grace</em>
         </h1>
