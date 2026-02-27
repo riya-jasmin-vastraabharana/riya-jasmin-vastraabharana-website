@@ -82,9 +82,18 @@ const PRODUCTS: Product[] = [
     whatsapp: "Hi! I want to order Sage Green Chanderi (RJV-SAR-COT-001) Rs 2799"
   },
   {
+    id: "s003", sku: "RJV-SAR-COT-001", name: "Sage Green Chanderi Cotton", slug: "sage-green-chanderi",
+    price: 2799, originalPrice: 4200,
+    images: ["https://images.unsplash.com/photo-1617627143750-d86bc21e42bb?w=400&q=80"],
+    tag: "Sale", desc: "Lightweight Chanderi cotton, office and casual wear",
+    stock: 30, material: "Chanderi Cotton", occasion: ["Daily","Office","Casual"],
+    category: "sarees", subcategory: "cotton",
+    whatsapp: "Hi! I want to order Sage Green Chanderi (RJV-SAR-COT-001) Rs 2799"
+  },
+  {
     id: "s004", sku: "RJV-SAR-MYS-001", name: "Mysore Crepe Silk", slug: "mysore-crepe-silk",
     price: 4599, originalPrice: 6800,
-    images: ["https://images.unsplash.com/photo-1594736797933-d0501ba2fe65?w=400&q=80"],
+    images: ["/Mission-Impossible.jpeg"],
     tag: "New", desc: "Traditional temple border, pure Mysore silk",
     stock: 18, material: "Pure Silk", occasion: ["Festive","Wedding","Puja"],
     category: "sarees", subcategory: "mysore-silk",
