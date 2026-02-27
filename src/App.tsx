@@ -191,7 +191,7 @@ const TICKER_MESSAGES = [
   "WhatsApp us at +91 93810 21541 for custom orders",
   "Easy 7-day returns on all products",
   "Follow us on Instagram @rj_alankara for new arrivals",
-  "UPI: Pay via UPI: billa.14673370@ybl | PhonePe: 9381021541"
+  "UPI: billa.14673370@ybl | PhonePe: 9381021541"
 ];
 
 // ── SVG Icons ────────────────────────────────────────────────
@@ -230,7 +230,7 @@ const IconPlay = () => (
 );
 
 // ── Scrolling Ticker ─────────────────────────────────────────
-function Ticker() {
+/* function Ticker() {
   const text = TICKER_MESSAGES.join("   •   ") + "   •   ";
   return (
     <div style={{ background: "#B8860B", color: "#fff", height: 34, display: "flex", alignItems: "center", overflow: "hidden" }}>
@@ -245,7 +245,52 @@ function Ticker() {
     </div>
   );
 }
+ */
+ 
+function Ticker() {
+  const text = TICKER_MESSAGES.join("   •   ") + "   •   ";
 
+  return (
+    <div
+      style={{
+        background: "linear-gradient(90deg,#8B6B00,#B8860B,#8B6B00)",
+        color: "#fff",
+        minHeight: 34,
+        display: "flex",
+        alignItems: "center",
+        overflow: "hidden",
+        boxShadow: "0 2px 10px rgba(0,0,0,0.15)"
+      }}
+    >
+      <style>{`
+        @keyframes ticker {
+          0% { transform:translateX(0) }
+          100% { transform:translateX(-50%) }
+        }
+        .ticker-track {
+          display:inline-flex;
+          white-space:nowrap;
+          animation:ticker 45s linear infinite;
+        }
+        .ticker-track:hover {
+          animation-play-state:paused;
+          cursor:default;
+        }
+      `}</style>
+
+      <div
+        className="ticker-track"
+        style={{
+          fontSize: 13,
+          fontFamily: "'EB Garamond',Georgia,serif",
+          letterSpacing: 0.5
+        }}
+      >
+        <span>{text}{text}</span>
+      </div>
+    </div>
+  );
+}
 // ── Product Card with Video Support ─────────────────────────
 function ProductCard({
   product, onAddToCart, onWhatsApp, onWishlist, isWishlisted
