@@ -215,7 +215,7 @@ export default function App() {
   const [cardNum, setCardNum] = useState("");
   const [cardExpiry, setCardExpiry] = useState("");
   const [cardCvv, setCardCvv] = useState("");
-  const [upiId, setUpiId] = useState("");
+/*   const [upiId, setUpiId] = useState(""); */
   const [paymentConfirmed, setPaymentConfirmed] = useState(false);
 
   const showToast = (msg: string) => { setToast(msg); setTimeout(() => setToast(""), 3000); };
