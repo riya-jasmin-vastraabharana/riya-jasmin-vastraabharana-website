@@ -1,0 +1,42 @@
+How Videos Work — 3 Simple Rules
+Rule 1 — Where to put your files
+Put ALL images and videos in this ONE folder:
+C:\Riya Jasmin Vastraabharana\riya-jasmin-vastraabharana\public\
+You can paste 50 files at once — just Ctrl+A → Copy → Paste into that folder.
+
+Rule 2 — How to add a product with video
+Open src\App.tsx, find the PRODUCTS list and add like this:
+tsx{
+  id: "s005",
+  sku: "RJV-SAR-KAN-002",
+  name: "Blue Kanjivaram Silk",
+  slug: "blue-kanjivaram",
+  price: 8999,
+  originalPrice: 13000,
+  images: ["/kanjivaram-blue.jpg"],     // ← image in public\
+  video: "/kanjivaram-blue-video.mp4",  // ← video in public\ (optional)
+  tag: "Bestseller",
+  desc: "Handwoven blue Kanjivaram silk saree",
+  stock: 5,
+  material: "Pure Mulberry Silk",
+  occasion: ["Wedding", "Bridal"],
+  category: "sarees",
+  subcategory: "kanjivaram",
+  whatsapp: "Hi! I want to order Blue Kanjivaram Rs 8999"
+},
+
+Rule 3 — Featured video section on homepage
+Find FEATURED_VIDEOS near top of App.tsx and add:
+tsxconst FEATURED_VIDEOS = [
+  { src: "/collection-reel.mp4", title: "Festive Collection 2025", thumb: "/collection-thumb.jpg" },
+  { src: "/bridal-video.mp4",    title: "Bridal Sarees",           thumb: "/bridal-thumb.jpg"    },
+];
+
+What happens on the website
+FeatureHow it worksProduct has video:Small VIDEO badge on cardCustomer hovers on cardVideo plays silently, automaticallyMouse moves awayVideo stops, image shows againFEATURED_VIDEOS filledFull video section appears on homepageVideo file missingFalls back to image, no error
+Supported formats: .mp4 .webm .mov for video, .jpg .png .webp for images.
+
+
+git add .
+git commit -m "Added blue kanjivaram image properly"
+git push
