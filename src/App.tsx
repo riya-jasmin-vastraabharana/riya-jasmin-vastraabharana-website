@@ -92,12 +92,12 @@ const PRODUCTS: Product[] = [
   },
   {
     id: "s004", sku: "RJV-SAR-MYS-001", name: "Mysore Crepe Silk", slug: "mysore-crepe-silk",
-    price: 4599, originalPrice: 6800,
+    price: 20, originalPrice: 6800,
     images: ["/Mission-Impossible.jpeg"],
     tag: "New", desc: "Traditional temple border, pure Mysore silk",
     stock: 18, material: "Pure Silk", occasion: ["Festive","Wedding","Puja"],
     category: "sarees", subcategory: "mysore-silk",
-    whatsapp: "Hi! I want to order Mysore Crepe Silk (RJV-SAR-MYS-001) Rs 4599"
+    whatsapp: "Hi! I want to order Mysore Crepe Silk (RJV-SAR-MYS-001) Rs 20"
   },
   // ── ADD YOUR OWN PRODUCTS BELOW THIS LINE ──────────────────
   // Example with your own image from public\ folder:
