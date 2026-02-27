@@ -130,8 +130,8 @@ const PRODUCTS: ProductWithMedia[] = [
   //   sku: "RJV-SAR-KAN-002",
   //   name: "Blue Kanjivaram Silk",
   //   slug: "blue-kanjivaram-silk",
-  //   price: 8999,
-  //   originalPrice: 13000,
+  //   price: 89999,
+  //   originalPrice: 130000,
   //   images: ["/kanjivaram-blue.jpg"],   ← file in public\ folder
   //   video: "/kanjivaram-blue-video.mp4", ← optional, file in public\ folder
   //   tag: "Bestseller",  ← Bestseller / New / Sale / Premium / Trending
