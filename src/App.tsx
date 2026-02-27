@@ -140,7 +140,7 @@ const TICKER_MESSAGES = [
   "WhatsApp us at +91 93810 21541 for custom orders",
   "Easy 7-day returns on all products",
   "Follow us on Instagram @rj_alankara for new arrivals",
-  "Pay via UPI: " billa14673370@ybl,
+ // "Pay via UPI: " billa14673370@ybl,
 ];
 
 // SVG Icons
