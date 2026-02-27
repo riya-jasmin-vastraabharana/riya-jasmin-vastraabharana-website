@@ -90,15 +90,6 @@ const PRODUCTS: Product[] = [
     category: "sarees", subcategory: "mysore-silk",
     whatsapp: "Hi! I want to order Mysore Crepe Silk (RJV-SAR-MYS-001) Rs 4599"
   },
-  {
-     id: "s005", sku: "RJV-SAR-KAN-002", name: "Blue Kanjivaram", slug: "blue-kanjivaram",
-     price: 8999, originalPrice: 13000,
-     images: ["/Mission-Impossible.jpeg"],   <-- put file in public\ folder, use /filename
-     tag: "Bestseller", desc: "Pure Zari work bridal Kanjivaram silk saree",
-     stock: 5, material: "Pure Mulberry Silk", occasion: ["Wedding","Bridal"],
-     category: "sarees", subcategory: "kanjivaram",
-     whatsapp: "Hi! I want to order Blue Kanjivaram (RJV-SAR-KAN-002) Rs 1000"
-  }
   // ── ADD YOUR OWN PRODUCTS BELOW THIS LINE ──────────────────
   // Example with your own image from public\ folder:
   // {
