@@ -13,12 +13,12 @@
   },
   social: {
     instagram: {
-      handle: '@rj_alankara',
-      url: 'https://instagram.com/rj_alankara',
+      handle: '@rj_vastraabharana',
+      url: 'https://instagram.com/rj_vastraabharana',
     },
     facebook: {
-      handle: 'rj_alankara',
-      url: 'https://facebook.com/rj_alankara',
+      handle: 'rj_vastraabharana',
+      url: 'https://facebook.com/rj_vastraabharana',
     },
   },
 };
