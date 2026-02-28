@@ -144,9 +144,7 @@ export default function App() {
   const itemCount = items.reduce((sum, i) => sum + i.quantity, 0);
   const { toggle, has } = useWishlistStore();
 
-  // ✅ FIX: compute total & count directly from items (not from store getter)
-  const total    = cartTotal(items);
-  const itemCount = cartCount(items);
+ 
 
   const [cat, setCat]           = useState("all");
   const [search, setSearch]     = useState("");
