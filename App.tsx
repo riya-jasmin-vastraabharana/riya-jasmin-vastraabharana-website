@@ -140,6 +140,8 @@ function upiLink(app: string, amount: number) {
 // ─────────────────────────────────────────────────────────────
 export default function App() {
   const { items, addItem, removeItem, updateQuantity, clearCart } = useCartStore();
+  const total     = items.reduce((sum, i) => sum + i.product.price * i.quantity, 0);
+  const itemCount = items.reduce((sum, i) => sum + i.quantity, 0);
   const { toggle, has } = useWishlistStore();
 
   // ✅ FIX: compute total & count directly from items (not from store getter)
