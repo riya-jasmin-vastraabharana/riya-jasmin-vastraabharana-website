@@ -144,7 +144,7 @@ const INDIAN_STATES = ["Andhra Pradesh","Assam","Bihar","Delhi","Goa","Gujarat",
 // ── Scrolling ticker messages — edit these! ──────────────────
 const TICKER_MESSAGES = [
   "Free Shipping on orders above Rs. 1,999",
-  "New Festive Collection 2025 — Shop Now!",
+  "New Festive Collection 2026 — Shop Now!",
   "Authentic handwoven sarees from master weavers",
   "WhatsApp us at +91 93810 21541 for custom orders",
   "Easy 7-day returns on all products",
@@ -319,7 +319,7 @@ export default function App() {
 
       {/* ── HERO ── */}
       <div style={{ background: "linear-gradient(135deg,#2c1810 0%,#5a2d0c 50%,#8B1A4A 100%)", padding: "64px 28px", textAlign: "center" }}>
-        <div style={{ fontSize: 11, letterSpacing: 6, color: "#B8860B", textTransform: "uppercase", marginBottom: 10 }}>Festive Collection 2025</div>
+        <div style={{ fontSize: 11, letterSpacing: 6, color: "#B8860B", textTransform: "uppercase", marginBottom: 10 }}>Festive Collection 2026</div>
         <h1 style={{ fontFamily: "Cormorant Garamond", fontSize: 52, fontWeight: 300, color: "#f5e6d3", margin: "0 0 12px", lineHeight: 1.1 }}>
           Draped in<br /><em style={{ fontWeight: 600, color: "#DAA520" }}>Timeless Grace</em>
         </h1>
@@ -714,7 +714,7 @@ export default function App() {
             </div>
           </div>
           <div style={{ borderTop: "1px solid #3a2010", paddingTop: 16, textAlign: "center", fontSize: 11, color: "#5a3a2a" }}>
-            &copy; 2025 Riya Jasmin Vastraabharana. All rights reserved. Handcrafted with love in India.
+            &copy; 2026 Riya Jasmin Vastraabharana. All rights reserved. Handcrafted with love in India.
           </div>
         </div>
       </footer>
