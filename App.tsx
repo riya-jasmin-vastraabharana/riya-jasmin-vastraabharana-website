@@ -1,5 +1,5 @@
 import { useState, useMemo, useRef } from "react";
-import { useCartStore, cartTotal, cartCount } from "./store/useCartStore";
+import { useCartStore } from "./store/useCartStore";
 import { useWishlistStore } from "./store/useWishlistStore";
 import { formatCurrency, getDiscountPercent, calculateShipping, generateOrderNumber } from "./utils";
 import { SITE_CONFIG } from "./config/site";

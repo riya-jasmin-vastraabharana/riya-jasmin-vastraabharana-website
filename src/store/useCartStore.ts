@@ -2,10 +2,6 @@
 import { persist } from 'zustand/middleware';
 import type { CartItem, Product } from '../types';
 
-// ── FIXED: removed broken JS getters (get total(){} / get itemCount(){})
-// Zustand freezes getters at 0 in localStorage — they never update.
-// total and itemCount are now computed in App.tsx directly from items[].
-
 interface CartState {
   items: CartItem[];
   addItem:        (product: Product) => void;
@@ -50,8 +46,6 @@ export const useCartStore = create<CartState>()(
 
       clearCart: () => set({ items: [] }),
     }),
-    {
-      name: 'rjv-cart-v2',   // ← changed name clears old broken localStorage cache
-    }
+    { name: 'rjv-cart-v2' }
   )
 );
