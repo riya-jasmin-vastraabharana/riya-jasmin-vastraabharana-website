@@ -158,9 +158,9 @@ export default function App() {
   const [orderDone, setOrderDone] = useState("");
   const [toast, setToast]       = useState("");
   const [form, setForm]         = useState<OrderForm>({ name:"", email:"", phone:"", address:"", city:"", state:"", pincode:"" });
-  const [cardNum, setCardNum]   = useState("");
+  /* const [cardNum, setCardNum]   = useState("");
   const [cardExp, setCardExp]   = useState("");
-  const [cardCvv, setCardCvv]   = useState("");
+  const [cardCvv, setCardCvv]   = useState(""); */
   const [rzpLoading, setRzpLoading] = useState(false);
 
   const showToast = (m: string) => { setToast(m); setTimeout(()=>setToast(""), 3000); };
