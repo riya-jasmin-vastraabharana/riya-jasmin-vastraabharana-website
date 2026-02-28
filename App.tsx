@@ -140,11 +140,12 @@ function upiLink(app: string, amount: number) {
 // ─────────────────────────────────────────────────────────────
 export default function App() {
   const { items, addItem, removeItem, updateQuantity, clearCart } = useCartStore();
+  const hasHydrated = useCartStore(state => state._hasHydrated);
+
+  if (!hasHydrated) return null;
   const total     = items.reduce((sum, i) => sum + i.product.price * i.quantity, 0);
   const itemCount = items.reduce((sum, i) => sum + i.quantity, 0);
   const { toggle, has } = useWishlistStore();
-
- 
 
   const [cat, setCat]           = useState("all");
   const [search, setSearch]     = useState("");
@@ -586,3 +587,7 @@ export default function App() {
     </div>
   );
 }
+
+console.log("STORE ITEMS:", items);
+console.log("ITEMS:", items);
+console.log("TOTAL:", total);

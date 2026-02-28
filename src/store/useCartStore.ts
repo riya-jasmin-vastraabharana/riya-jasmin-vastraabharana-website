@@ -2,19 +2,31 @@
 import { persist } from 'zustand/middleware';
 import type { CartItem, Product } from '../types';
 
-interface CartState {
+/* interface CartState {
   items: CartItem[];
   addItem:        (product: Product) => void;
   removeItem:     (productId: string) => void;
   updateQuantity: (productId: string, quantity: number) => void;
   clearCart:      () => void;
+} */
+
+interface CartState {
+  items: CartItem[];
+  _hasHydrated: boolean;
+  setHasHydrated: (state: boolean) => void;
+
+  addItem: (product: Product) => void;
+  removeItem: (productId: string) => void;
+  updateQuantity: (productId: string, quantity: number) => void;
+  clearCart: () => void;
 }
 
 export const useCartStore = create<CartState>()(
   persist(
     (set, get) => ({
       items: [],
-
+      _hasHydrated: false,
+      setHasHydrated: (state: boolean) => set({ _hasHydrated: state }),
       addItem: (product) => {
         const existing = get().items.find(i => i.product.id === product.id);
         if (existing) {
@@ -46,6 +58,12 @@ export const useCartStore = create<CartState>()(
 
       clearCart: () => set({ items: [] }),
     }),
-    { name: 'rjv-cart-v2' }
+    {
+      name: 'rjv-cart-v2',
+      onRehydrateStorage: () => (state) => {
+        state?.setHasHydrated(true);
+      }
+    }    
+
   )
 );
