@@ -355,7 +355,7 @@ export default function App() {
                 <p style={{color:"#8B6040",lineHeight:1.7,marginBottom:16}}>Thank you, {form.name}!<br/>Your order details are being sent to WhatsApp now.</p>
                 <div style={{background:"#e8f5e9",borderRadius:8,padding:"12px 18px",marginBottom:18,fontSize:13,color:"#2E7D5C"}}>Delivery in 5-7 business days</div>
                 <div style={{display:"flex",gap:8,marginBottom:14}}>
-                  <a href={SITE_CONFIG.social.instagram.url} target="_blank" rel="noreferrer" style={{flex:1,background:"#833AB4",color:"#fff",padding:"9px 0",borderRadius:6,textAlign:"center",textDecoration:"none",fontSize:12,display:"flex",alignItems:"center",justifyContent:"center",gap:5}}><IcoIG s={13}/> Follow @rj_alankara</a>
+                  <a href={SITE_CONFIG.social.instagram.url} target="_blank" rel="noreferrer" style={{flex:1,background:"#833AB4",color:"#fff",padding:"9px 0",borderRadius:6,textAlign:"center",textDecoration:"none",fontSize:12,display:"flex",alignItems:"center",justifyContent:"center",gap:5}}><IcoIG s={13}/> Follow @rj_vastraabharana</a>
                   <a href={SITE_CONFIG.social.facebook.url} target="_blank" rel="noreferrer" style={{flex:1,background:"#1877F2",color:"#fff",padding:"9px 0",borderRadius:6,textAlign:"center",textDecoration:"none",fontSize:12,display:"flex",alignItems:"center",justifyContent:"center",gap:5}}><IcoFB s={13}/> Like on Facebook</a>
                 </div>
                 <button onClick={resetCo} style={{background:"#2c1810",color:"#f5e6d3",border:"none",padding:"10px 28px",borderRadius:4,cursor:"pointer",fontFamily:"Cormorant Garamond",fontSize:15}}>Continue Shopping</button>
@@ -577,8 +577,8 @@ export default function App() {
             </div>
             <div>
               <div style={{fontFamily:"Cormorant Garamond",fontSize:15,color:"#f5e6d3",marginBottom:10}}>Follow Us</div>
-              <a href={SITE_CONFIG.social.instagram.url} target="_blank" rel="noreferrer" style={{display:"flex",alignItems:"center",gap:6,color:"#E1306C",textDecoration:"none",fontSize:13,marginBottom:6}}><IcoIG/> @rj_alankara</a>
-              <a href={SITE_CONFIG.social.facebook.url} target="_blank" rel="noreferrer" style={{display:"flex",alignItems:"center",gap:6,color:"#1877F2",textDecoration:"none",fontSize:13}}><IcoFB/> rj_alankara</a>
+              <a href={SITE_CONFIG.social.instagram.url} target="_blank" rel="noreferrer" style={{display:"flex",alignItems:"center",gap:6,color:"#E1306C",textDecoration:"none",fontSize:13,marginBottom:6}}><IcoIG/> @rj_vastraabharana</a>
+              <a href={SITE_CONFIG.social.facebook.url} target="_blank" rel="noreferrer" style={{display:"flex",alignItems:"center",gap:6,color:"#1877F2",textDecoration:"none",fontSize:13}}><IcoFB/> rj_vastraabharana</a>
             </div>
           </div>
           <div style={{borderTop:"1px solid #3a2010",paddingTop:16,textAlign:"center",fontSize:11,color:"#5a3a2a"}}>
