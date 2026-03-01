@@ -172,7 +172,8 @@ const PRODUCTS: ProductWithMedia[] = [
     price: 2799,
     originalPrice: 4200,
     images: [
-      "/Mission-Impossible.jpeg",           // ← image 1 (shown by default)
+      "/Mission-Impossible.jpeg",  // ← image 1 (shown by default)
+      "/testing.jpeg", 
       // "/Mission-Impossible-back.jpeg",   // ← image 2 (shown on hover) — add when ready
     ],
     video: "/testing.mp4",                  // ← video plays on hover (overrides image 2)
