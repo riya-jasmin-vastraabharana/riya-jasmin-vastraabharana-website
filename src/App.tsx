@@ -14,17 +14,219 @@ interface ProductWithMedia extends Product {
   video?: string;
 }
 
+//  HOW TO ADD IMAGES & VIDEO:
+//
+//  1 image only:
+//    images: ["/saree.jpg"],
+//
+//  2 images (swaps on hover):
+//    images: ["/saree-front.jpg", "/saree-back.jpg"],
+//
+//  1 image + 1 video (video plays on hover):
+//    images: ["/saree.jpg"],
+//    video: "/saree-video.mp4",
+//
+//  All files must be placed in:
+//    C:\Riya Jasmin Vastraabharana\riya-jasmin-vastraabharana\public\
+// ═══════════════════════════════════════════════════════════════
+
 const PRODUCTS: ProductWithMedia[] = [
-  { id: "e001", sku: "RJV-EAR-001", name: "Pearl Drop Earrings", slug: "pearl-drop-earrings", price: 3299, originalPrice: 5000, images: ["https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?w=400&q=80"], tag: "Trending", desc: "Freshwater pearls, sterling silver base", stock: 24, material: "Sterling Silver", occasion: ["Wedding","Festive"], category: "jewellery", subcategory: "earrings", whatsapp: "Hi! I want to order Pearl Drop Earrings (RJV-EAR-001) Rs 3299" },
-  { id: "e002", sku: "RJV-EAR-002", name: "Kundan Jhumkas", slug: "kundan-jhumkas", price: 2199, originalPrice: 3500, images: ["https://images.unsplash.com/photo-1601121141461-9d6647bef0a1?w=400&q=80"], tag: "Bestseller", desc: "Traditional Rajasthani gold plated jhumkas", stock: 15, material: "Gold Plated", occasion: ["Wedding","Festive","Bridal"], category: "jewellery", subcategory: "earrings", whatsapp: "Hi! I want to order Kundan Jhumkas (RJV-EAR-002) Rs 2199" },
-  { id: "n001", sku: "RJV-NEC-001", name: "Temple Gold Necklace", slug: "temple-gold-necklace", price: 9499, originalPrice: 14000, images: ["https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?w=400&q=80"], tag: "Premium", desc: "22K gold plated, south Indian temple style", stock: 10, material: "Gold Plated", occasion: ["Wedding","Bridal","Festive"], category: "jewellery", subcategory: "necklaces", whatsapp: "Hi! I want to order Temple Gold Necklace (RJV-NEC-001) Rs 9499" },
-  { id: "b001", sku: "RJV-BAN-001", name: "Polki Diamond Bangles", slug: "polki-diamond-bangles", price: 18999, originalPrice: 28000, images: ["https://images.unsplash.com/photo-1573408301185-9519f94ae9e8?w=400&q=80"], tag: "Premium", desc: "Set of 4, antique finish polki bangles", stock: 6, material: "Gold Plated Brass", occasion: ["Wedding","Bridal"], category: "jewellery", subcategory: "bangles", whatsapp: "Hi! I want to order Polki Bangles (RJV-BAN-001) Rs 18999" },
-  { id: "s001", sku: "RJV-SAR-KAN-001", name: "Ruby Red Kanjivaram", slug: "ruby-red-kanjivaram", price: 8499, originalPrice: 12000, images: ["https://images.unsplash.com/photo-1610030469983-98e550d6193c?w=400&q=80"], tag: "Bestseller", desc: "Pure Zari work bridal Kanjivaram silk saree", stock: 8, material: "Pure Mulberry Silk", occasion: ["Wedding","Bridal","Festive"], category: "sarees", subcategory: "kanjivaram", whatsapp: "Hi! I want to order Ruby Red Kanjivaram (RJV-SAR-KAN-001) Rs 8499" },
-  { id: "s002", sku: "RJV-SAR-BAN-001", name: "Royal Blue Banarasi", slug: "royal-blue-banarasi", price: 6299, originalPrice: 9500, images: ["https://images.unsplash.com/photo-1583391733956-6c78276477e4?w=400&q=80"], tag: "New", desc: "Handwoven Banarasi silk with golden brocade", stock: 12, material: "Pure Silk", occasion: ["Wedding","Festive","Reception"], category: "sarees", subcategory: "banarasi", whatsapp: "Hi! I want to order Royal Blue Banarasi (RJV-SAR-BAN-001) Rs 6299" },
-  { id: "s003", sku: "RJV-SAR-COT-001", name: "Sage Green Chanderi Cotton", slug: "sage-green-chanderi", price: 2799, originalPrice: 4200, images: ["https://images.unsplash.com/photo-1617627143750-d86bc21e42bb?w=400&q=80"], tag: "Sale", desc: "Lightweight Chanderi cotton, office and casual wear", stock: 30, material: "Chanderi Cotton", occasion: ["Daily","Office","Casual"], category: "sarees", subcategory: "cotton", whatsapp: "Hi! I want to order Sage Green Chanderi (RJV-SAR-COT-001) Rs 2799" },
-  { id: "s005", sku: "RJV-SAR-COT-001", name: "Abdul Sattar Billa", slug: "sage-green-chanderi", price: 2799, originalPrice: 4200, images: ["/Mission-Impossible.jpeg"], video: "/testing.mp4", tag: "Sale", desc: "Lightweight Chanderi cotton, office and casual wear", stock: 30, material: "Chanderi Cotton", occasion: ["Daily","Office","Casual"], category: "sarees", subcategory: "cotton", whatsapp: "Hi! I want to order Sage Green Chanderi (RJV-SAR-COT-001) Rs 2899" },
-  { id: "s004", sku: "RJV-SAR-MYS-001", name: "Mysore Crepe Silk", slug: "mysore-crepe-silk", price: 4599, originalPrice: 6800, images: ["https://images.unsplash.com/photo-1594736797933-d0501ba2fe65?w=400&q=80"], tag: "New", desc: "Traditional temple border, pure Mysore silk", stock: 18, material: "Pure Silk", occasion: ["Festive","Wedding","Puja"], category: "sarees", subcategory: "mysore-silk", whatsapp: "Hi! I want to order Mysore Crepe Silk (RJV-SAR-MYS-001) Rs 4599" },
-  // ADD YOUR PRODUCTS HERE — copy any line above, change id/name/price/images
+
+  // ── JEWELLERY ───────────────────────────────────────────────
+
+  {
+    id: "e001",
+    sku: "RJV-EAR-001",
+    name: "Pearl Drop Earrings",
+    slug: "pearl-drop-earrings",
+    price: 3299,
+    originalPrice: 5000,
+    images: ["https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?w=400&q=80"],
+    // video: "/pearl-earrings.mp4",     ← uncomment to add video
+    tag: "Trending",
+    desc: "Freshwater pearls, sterling silver base",
+    stock: 24,
+    material: "Sterling Silver",
+    occasion: ["Wedding", "Festive"],
+    category: "jewellery",
+    subcategory: "earrings",
+    whatsapp: "Hi! I want to order Pearl Drop Earrings (RJV-EAR-001) Rs 3299"
+  },
+
+  {
+    id: "e002",
+    sku: "RJV-EAR-002",
+    name: "Kundan Jhumkas",
+    slug: "kundan-jhumkas",
+    price: 2199,
+    originalPrice: 3500,
+    images: ["https://images.unsplash.com/photo-1601121141461-9d6647bef0a1?w=400&q=80"],
+    tag: "Bestseller",
+    desc: "Traditional Rajasthani gold plated jhumkas",
+    stock: 15,
+    material: "Gold Plated",
+    occasion: ["Wedding", "Festive", "Bridal"],
+    category: "jewellery",
+    subcategory: "earrings",
+    whatsapp: "Hi! I want to order Kundan Jhumkas (RJV-EAR-002) Rs 2199"
+  },
+
+  {
+    id: "n001",
+    sku: "RJV-NEC-001",
+    name: "Temple Gold Necklace",
+    slug: "temple-gold-necklace",
+    price: 9499,
+    originalPrice: 14000,
+    images: ["https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?w=400&q=80"],
+    tag: "Premium",
+    desc: "22K gold plated, south Indian temple style",
+    stock: 10,
+    material: "Gold Plated",
+    occasion: ["Wedding", "Bridal", "Festive"],
+    category: "jewellery",
+    subcategory: "necklaces",
+    whatsapp: "Hi! I want to order Temple Gold Necklace (RJV-NEC-001) Rs 9499"
+  },
+
+  {
+    id: "b001",
+    sku: "RJV-BAN-001",
+    name: "Polki Diamond Bangles",
+    slug: "polki-diamond-bangles",
+    price: 18999,
+    originalPrice: 28000,
+    images: ["https://images.unsplash.com/photo-1573408301185-9519f94ae9e8?w=400&q=80"],
+    tag: "Premium",
+    desc: "Set of 4, antique finish polki bangles",
+    stock: 6,
+    material: "Gold Plated Brass",
+    occasion: ["Wedding", "Bridal"],
+    category: "jewellery",
+    subcategory: "bangles",
+    whatsapp: "Hi! I want to order Polki Bangles (RJV-BAN-001) Rs 18999"
+  },
+
+  // ── SAREES ──────────────────────────────────────────────────
+
+  {
+    id: "s001",
+    sku: "RJV-SAR-KAN-001",
+    name: "Ruby Red Kanjivaram",
+    slug: "ruby-red-kanjivaram",
+    price: 8499,
+    originalPrice: 12000,
+    images: ["https://images.unsplash.com/photo-1610030469983-98e550d6193c?w=400&q=80"],
+    tag: "Bestseller",
+    desc: "Pure Zari work bridal Kanjivaram silk saree",
+    stock: 8,
+    material: "Pure Mulberry Silk",
+    occasion: ["Wedding", "Bridal", "Festive"],
+    category: "sarees",
+    subcategory: "kanjivaram",
+    whatsapp: "Hi! I want to order Ruby Red Kanjivaram (RJV-SAR-KAN-001) Rs 8499"
+  },
+
+  {
+    id: "s002",
+    sku: "RJV-SAR-BAN-001",
+    name: "Royal Blue Banarasi",
+    slug: "royal-blue-banarasi",
+    price: 6299,
+    originalPrice: 9500,
+    images: ["https://images.unsplash.com/photo-1583391733956-6c78276477e4?w=400&q=80"],
+    tag: "New",
+    desc: "Handwoven Banarasi silk with golden brocade",
+    stock: 12,
+    material: "Pure Silk",
+    occasion: ["Wedding", "Festive", "Reception"],
+    category: "sarees",
+    subcategory: "banarasi",
+    whatsapp: "Hi! I want to order Royal Blue Banarasi (RJV-SAR-BAN-001) Rs 6299"
+  },
+
+  {
+    id: "s003",
+    sku: "RJV-SAR-COT-001",
+    name: "Sage Green Chanderi Cotton",
+    slug: "sage-green-chanderi",
+    price: 2799,
+    originalPrice: 4200,
+    images: ["https://images.unsplash.com/photo-1617627143750-d86bc21e42bb?w=400&q=80"],
+    tag: "Sale",
+    desc: "Lightweight Chanderi cotton, office and casual wear",
+    stock: 30,
+    material: "Chanderi Cotton",
+    occasion: ["Daily", "Office", "Casual"],
+    category: "sarees",
+    subcategory: "cotton",
+    whatsapp: "Hi! I want to order Sage Green Chanderi (RJV-SAR-COT-001) Rs 2799"
+  },
+
+  // ── EXAMPLE: 2 images — front and back view ─────────────────
+  {
+    id: "s005",
+    sku: "RJV-SAR-COT-002",
+    name: "Abdul Sattar Billa",              // ← your test product
+    slug: "abdul-sattar-billa",
+    price: 2799,
+    originalPrice: 4200,
+    images: [
+      "/Mission-Impossible.jpeg",           // ← image 1 (shown by default)
+      // "/Mission-Impossible-back.jpeg",   // ← image 2 (shown on hover) — add when ready
+    ],
+    video: "/testing.mp4",                  // ← video plays on hover (overrides image 2)
+    tag: "Sale",
+    desc: "Lightweight Chanderi cotton, office and casual wear",
+    stock: 30,
+    material: "Chanderi Cotton",
+    occasion: ["Daily", "Office", "Casual"],
+    category: "sarees",
+    subcategory: "cotton",
+    whatsapp: "Hi! I want to order (RJV-SAR-COT-002) Rs 2899"
+  },
+
+  {
+    id: "s004",
+    sku: "RJV-SAR-MYS-001",
+    name: "Mysore Crepe Silk",
+    slug: "mysore-crepe-silk",
+    price: 4599,
+    originalPrice: 6800,
+    images: ["https://images.unsplash.com/photo-1594736797933-d0501ba2fe65?w=400&q=80"],
+    tag: "New",
+    desc: "Traditional temple border, pure Mysore silk",
+    stock: 18,
+    material: "Pure Silk",
+    occasion: ["Festive", "Wedding", "Puja"],
+    category: "sarees",
+    subcategory: "mysore-silk",
+    whatsapp: "Hi! I want to order Mysore Crepe Silk (RJV-SAR-MYS-001) Rs 4599"
+  },
+
+  // ── ADD YOUR NEW PRODUCTS BELOW — copy this template ────────
+  // {
+  //   id: "s006",                          ← must be unique
+  //   sku: "RJV-SAR-KAN-002",
+  //   name: "Blue Kanjivaram Silk",
+  //   slug: "blue-kanjivaram",
+  //   price: 8999,
+  //   originalPrice: 13000,
+  //   images: [
+  //     "/kanjivaram-blue.jpg",            ← front photo (put in public\ folder)
+  //     "/kanjivaram-blue-back.jpg",       ← back photo shown on hover (optional)
+  //   ],
+  //   video: "/kanjivaram-blue-video.mp4", ← video on hover (optional, overrides 2nd image)
+  //   tag: "Bestseller",                   ← Bestseller / New / Sale / Premium / Trending
+  //   desc: "Handwoven blue Kanjivaram silk saree with gold zari border",
+  //   stock: 5,
+  //   material: "Pure Mulberry Silk",
+  //   occasion: ["Wedding", "Bridal"],
+  //   category: "sarees",                  ← sarees or jewellery
+  //   subcategory: "kanjivaram",
+  //   whatsapp: "Hi! I want to order Blue Kanjivaram Rs 8999"
+  // },
+
 ];
 
 // ═══════════════════════════════════════════════════════════════
@@ -68,7 +270,7 @@ function Ticker() {
 }
 
 // ── Product Card ──────────────────────────────────────────────
-function ProductCard({ p, onAdd, onWA, onWish, wished }: { p: ProductWithMedia; onAdd:()=>void; onWA:()=>void; onWish:()=>void; wished:boolean }) {
+/* function ProductCard({ p, onAdd, onWA, onWish, wished }: { p: ProductWithMedia; onAdd:()=>void; onWA:()=>void; onWish:()=>void; wished:boolean }) {
   const vRef = useRef<HTMLVideoElement>(null);
   const [hov, setHov] = useState(false);
   const [vErr, setVErr] = useState(false);
@@ -105,7 +307,133 @@ function ProductCard({ p, onAdd, onWA, onWish, wished }: { p: ProductWithMedia; 
       </div>
     </div>
   );
+} */
+
+// ── Replace your existing ProductCard function with this one ──
+// Supports: 1 image / 2 images (swap on hover) / image + video
+
+function ProductCard({ p, onAdd, onWA, onWish, wished }: { p: ProductWithMedia; onAdd:()=>void; onWA:()=>void; onWish:()=>void; wished:boolean }) {
+  const vRef = useRef<HTMLVideoElement>(null);
+  const [hov, setHov] = useState(false);
+  const [vErr, setVErr] = useState(false);
+
+  const hasVideo  = !!p.video && !vErr;
+  const has2Images = p.images.length >= 2;
+
+  // What image to show:
+  // - hovering + has video  → hide image (video shows on top)
+  // - hovering + 2 images   → show image[1] (back/second photo)
+  // - otherwise             → show image[0] (front photo)
+  const imgSrc = (hov && has2Images && !hasVideo) ? p.images[1] : p.images[0];
+
+  return (
+    <div
+      onMouseEnter={() => {
+        setHov(true);
+        if (hasVideo) vRef.current?.play().catch(() => setVErr(true));
+      }}
+      onMouseLeave={() => {
+        setHov(false);
+        if (vRef.current) { vRef.current.pause(); vRef.current.currentTime = 0; }
+      }}
+      style={{background:"#fff",borderRadius:8,overflow:"hidden",
+        boxShadow:hov?"0 8px 28px rgba(44,24,16,0.16)":"0 2px 12px rgba(44,24,16,0.08)",
+        transform:hov?"translateY(-4px)":"none",transition:"all 0.2s"}}>
+
+      <div style={{position:"relative",height:220,overflow:"hidden",background:"#f0e6d8"}}>
+
+        {/* Main image — swaps to image[1] on hover if 2 images exist */}
+        <img
+          src={imgSrc}
+          alt={p.name}
+          style={{
+            width:"100%", height:"100%", objectFit:"cover",
+            transition:"all 0.4s",
+            transform: hov && !hasVideo && !has2Images ? "scale(1.06)" : "none",
+            opacity: hov && hasVideo ? 0 : 1,   // hide when video plays
+            position:"absolute", inset:0
+          }}
+          onError={e => {
+            (e.currentTarget as HTMLImageElement).src =
+              "https://images.unsplash.com/photo-1583391733956-6c78276477e4?w=400&q=80";
+          }}
+        />
+
+        {/* Video — plays silently on hover */}
+        {hasVideo && (
+          <video
+            ref={vRef}
+            src={p.video}
+            muted loop playsInline preload="none"
+            onError={() => setVErr(true)}
+            style={{
+              width:"100%", height:"100%", objectFit:"cover",
+              position:"absolute", inset:0,
+              opacity: hov ? 1 : 0,
+              transition:"opacity 0.3s"
+            }}
+          />
+        )}
+
+        {/* Badges */}
+        {hasVideo && !hov && (
+          <div style={{position:"absolute",bottom:8,right:8,background:"rgba(0,0,0,0.6)",
+            color:"#fff",fontSize:10,fontWeight:700,padding:"3px 7px",borderRadius:3}}>
+            ▶ VIDEO
+          </div>
+        )}
+        {!hasVideo && has2Images && !hov && (
+          <div style={{position:"absolute",bottom:8,right:8,background:"rgba(0,0,0,0.5)",
+            color:"#fff",fontSize:10,fontWeight:600,padding:"3px 7px",borderRadius:3}}>
+            +1 VIEW
+          </div>
+        )}
+
+        {/* Tag & Wishlist */}
+        <div style={{position:"absolute",top:9,left:9,background:TAG_COLORS[p.tag]||"#B8860B",
+          color:"#fff",padding:"3px 9px",borderRadius:3,fontSize:11,fontWeight:600,zIndex:2}}>
+          {p.tag}
+        </div>
+        <button onClick={e=>{e.stopPropagation();onWish();}}
+          style={{position:"absolute",top:7,right:7,background:"rgba(255,255,255,0.92)",
+            border:"none",width:30,height:30,borderRadius:"50%",cursor:"pointer",
+            display:"flex",alignItems:"center",justifyContent:"center",zIndex:2}}>
+          <IcoHrt on={wished}/>
+        </button>
+      </div>
+
+      {/* Product info */}
+      <div style={{padding:"13px 15px"}}>
+        <div style={{fontSize:10,color:"#B8860B",letterSpacing:1,textTransform:"uppercase",marginBottom:3}}>{p.subcategory}</div>
+        <h3 style={{fontFamily:"Cormorant Garamond",fontSize:17,margin:"0 0 4px",color:"#2c1810"}}>{p.name}</h3>
+        <p style={{fontSize:12,color:"#8B6040",margin:"0 0 6px",lineHeight:1.5}}>{p.desc}</p>
+        {p.material && <div style={{fontSize:11,color:"#aaa",marginBottom:8}}>{p.material}</div>}
+        <div style={{display:"flex",alignItems:"center",gap:7,marginBottom:11}}>
+          <span style={{fontSize:18,fontWeight:600}}>{formatCurrency(p.price)}</span>
+          <span style={{fontSize:12,color:"#bbb",textDecoration:"line-through"}}>{formatCurrency(p.originalPrice)}</span>
+          <span style={{fontSize:11,background:"#e8f5e9",color:"#2E7D5C",padding:"2px 5px",borderRadius:3,fontWeight:600}}>
+            {getDiscountPercent(p.price,p.originalPrice)}% OFF
+          </span>
+        </div>
+        <div style={{display:"flex",gap:7}}>
+          <button onClick={onAdd}
+            style={{flex:2,background:"#2c1810",color:"#f5e6d3",border:"none",padding:"9px 0",borderRadius:4,cursor:"pointer",fontSize:13,transition:"background 0.2s"}}
+            onMouseEnter={e=>(e.currentTarget.style.background="#B8860B")}
+            onMouseLeave={e=>(e.currentTarget.style.background="#2c1810")}>
+            Add to Cart
+          </button>
+          <button onClick={onWA} title="Order on WhatsApp"
+            style={{flex:1,background:"#25D366",color:"#fff",border:"none",padding:"9px 0",borderRadius:4,cursor:"pointer",display:"flex",alignItems:"center",justifyContent:"center"}}>
+            <IcoWA />
+          </button>
+        </div>
+      </div>
+    </div>
+  );
 }
+
+
+
 
 // ── Razorpay helper ───────────────────────────────────────────
 function openRazorpay(amount: number, name: string, phone: string, onSuccess: (payId: string) => void) {
